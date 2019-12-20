@@ -5,6 +5,8 @@
 
 Basically [TensorFlow Privacy](https://github.com/tensorflow/privacy), but for PyTorch.
 
+DP-SGD implementation modeled after techniques presented within [Deep Learning with Differential Privacy](https://arxiv.org/abs/1607.00133) and [A General Approach to Adding Differential Privacy to Iterative Training Procedures](https://arxiv.org/abs/1812.06210).
+
 ## Example Usage
 
 ```python
@@ -52,17 +54,7 @@ for X_minibatch, y_minibatch in minibatch_loader(train_dataset):
 
 `mnist.py`
 
-Implements a basic classifier for identifying which digit a given MNIST image corresponds to. The model achieves a test set classification accuracy of 96.7%. The model architecture and results achieved are inspired by the corresponding tutorial within [TensorFlow privacy](https://github.com/tensorflow/privacy/tree/master/tutorials).
-
-`gan.py`
-
-Implements a Wasserstein GAN, in which the discriminator is trained via differentially private stochastic gradient descent. Generated images are plotted as a function of increasing epsilon (ɛ = 0.8, 3.0, 8.0).
-
-<div align="center">
-    <img src="assets/example_worst.png" width="200px">
-    <img src="assets/example_moderate.png" width="200px">
-    <img src="assets/example_best.png" width="200px">
-</div>
+Implements a basic classifier for identifying which digit a given MNIST image corresponds to. The model achieves a test set classification accuracy of 96.7%. The architecture and results achieved are inspired by the corresponding tutorial within [TensorFlow privacy](https://github.com/tensorflow/privacy/tree/master/tutorials).
 
 ## Disclaimer
 
