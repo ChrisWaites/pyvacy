@@ -16,6 +16,9 @@ from pyvacy import optim, analysis, sampling
 torch.manual_seed(0)
 np.random.seed(0)
 
+class Flatten(nn.Module):
+    def forward(self, inp):
+        return inp.reshape(inp.shape[0], -1)
 
 class Classifier(nn.Module):
     def __init__(self, input_dim, device='cpu'):

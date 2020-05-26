@@ -10,5 +10,5 @@ setup(
     license='Apache 2.0',
     url='http://github.com/ChrisWaites/pyvacy',
     packages=find_packages(),
-    install_requires=['pytorch', 'torch-vision'],
+    install_requires=['torch', 'torch-vision'],
 )
